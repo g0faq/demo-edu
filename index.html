@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Информатика ЕГЭ на 90+ · Онлайн-школа Вектор</title>
   <meta name="description" content="Онлайн-курс подготовки к ЕГЭ по информатике с куратором. Старт потока — 1 сентября.">
+  <meta property="og:title" content="Информатика ЕГЭ на 90+ · Онлайн-школа Вектор">
+  <meta property="og:description" content="Онлайн-курс с куратором. Старт потока — 1 сентября. 2 вебинара в неделю, домашки с проверкой и пробники.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23f7f5f0'/%3E%3Ctext x='50' y='74' font-family='Arial,sans-serif' font-size='76' font-weight='700' fill='%232437ff' text-anchor='middle'%3E%D0%92%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&family=Inter:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
@@ -20,12 +24,18 @@
 
   <main id="top">
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
+    <section class="hero marks">
+      <div class="container hero__inner">
         <span class="badge">Осталось 12 мест из 30</span>
-        <h1>Информатика ЕГЭ на 90+</h1>
+        <h1>Информатика ЕГЭ<br>на <span class="accent">90+</span></h1>
         <p class="hero__sub">Онлайн-курс с куратором. Старт потока — 1 сентября</p>
-        <a href="#signup" class="btn">Записаться на курс</a>
+        <a href="#signup" class="btn btn--lg">Записаться на курс</a>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__part">СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · </span>
+          <span class="marquee__part">СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · СТАРТ 1 СЕНТЯБРЯ · 2 ВЕБИНАРА В НЕДЕЛЮ · КУРАТОР · </span>
+        </div>
       </div>
     </section>
 
@@ -134,7 +144,7 @@
     </section>
 
     <!-- Тарифы -->
-    <section class="section" id="pricing">
+    <section class="section marks section--grid" id="pricing">
       <div class="container">
         <h2>Тарифы</h2>
         <div class="plans">
@@ -205,7 +215,7 @@
     </section>
 
     <!-- Форма -->
-    <section class="section" id="signup">
+    <section class="section marks" id="signup">
       <div class="container container--narrow">
         <h2>Записаться на курс</h2>
         <p class="section__sub">Оставьте заявку — куратор свяжется с вами и ответит на вопросы.</p>
@@ -241,6 +251,8 @@
       <p>Онлайн-школа Вектор · demo project</p>
     </div>
   </footer>
+
+  <a href="#signup" class="sticky-cta" id="sticky-cta">Записаться на курс</a>
 
   <script src="/js/main.js"></script>
 </body>

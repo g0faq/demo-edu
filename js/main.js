@@ -60,3 +60,69 @@
       });
   });
 })();
+
+/* Scroll reveal with stagger */
+(function () {
+  'use strict';
+
+  var reduceMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+  // Groups whose direct children reveal with a staggered delay.
+  var groups = document.querySelectorAll('.stats, .steps, .plans, .accordion');
+  Array.prototype.forEach.call(groups, function (group) {
+    Array.prototype.forEach.call(group.children, function (child, i) {
+      child.classList.add('reveal');
+      child.style.transitionDelay = i * 80 + 'ms';
+    });
+  });
+
+  // Standalone blocks that reveal as a whole.
+  var singles = document.querySelectorAll(
+    '.section h2, .section__sub, .form'
+  );
+  Array.prototype.forEach.call(singles, function (el) {
+    el.classList.add('reveal');
+  });
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  );
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll('.reveal'),
+    function (el) {
+      observer.observe(el);
+    }
+  );
+})();
+
+/* Sticky mobile CTA — appears after the first screen */
+(function () {
+  'use strict';
+
+  var cta = document.getElementById('sticky-cta');
+  if (!cta) return;
+
+  function update() {
+    if (window.scrollY > window.innerHeight * 0.9) {
+      cta.classList.add('is-visible');
+    } else {
+      cta.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
